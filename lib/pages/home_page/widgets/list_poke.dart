@@ -4,6 +4,10 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:pokedex/models/pokeapi.dart';
 
 class ListPoke extends StatelessWidget {
+  final PokemonApi pokemonApi;
+
+  const ListPoke({Key key, this.pokemonApi}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return AnimationLimiter(
