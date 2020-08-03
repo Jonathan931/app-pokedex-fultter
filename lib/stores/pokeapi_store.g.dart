@@ -9,18 +9,18 @@ part of 'pokeapi_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$PokeApiStore on _PokeApiStoreBase, Store {
-  final _$pokemonApiAtom = Atom(name: '_PokeApiStoreBase.pokemonApi');
+  final _$_pokemonApiAtom = Atom(name: '_PokeApiStoreBase._pokemonApi');
 
   @override
-  PokemonApi get pokemonApi {
-    _$pokemonApiAtom.reportRead();
-    return super.pokemonApi;
+  PokemonApi get _pokemonApi {
+    _$_pokemonApiAtom.reportRead();
+    return super._pokemonApi;
   }
 
   @override
-  set pokemonApi(PokemonApi value) {
-    _$pokemonApiAtom.reportWrite(value, super.pokemonApi, () {
-      super.pokemonApi = value;
+  set _pokemonApi(PokemonApi value) {
+    _$_pokemonApiAtom.reportWrite(value, super._pokemonApi, () {
+      super._pokemonApi = value;
     });
   }
 
@@ -41,7 +41,7 @@ mixin _$PokeApiStore on _PokeApiStoreBase, Store {
   @override
   String toString() {
     return '''
-pokemonApi: ${pokemonApi}
+
     ''';
   }
 }

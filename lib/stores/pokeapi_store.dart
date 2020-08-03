@@ -10,12 +10,14 @@ class PokeApiStore = _PokeApiStoreBase with _$PokeApiStore;
 
 abstract class _PokeApiStoreBase with Store {
   @observable
-  PokemonApi pokemonApi;
+  PokemonApi _pokemonApi;
+
+  PokemonApi get pokeApi => _pokemonApi;
 
   @action
   fetchPokemonList() {
-    pokemonApi = null;
-    loadPokeAPI().then((pokeList) => {pokemonApi = pokeList});
+    _pokemonApi = null;
+    loadPokeAPI().then((pokeList) => {_pokemonApi = pokeList});
   }
 
   Future<PokemonApi> loadPokeAPI() async {
